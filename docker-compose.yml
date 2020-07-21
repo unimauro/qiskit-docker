@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  qiskit:
+    build:
+      context: ./qiskit
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./_notebooks:/opt/notebooks
+    network_mode: host
